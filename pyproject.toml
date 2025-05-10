@@ -1,0 +1,9 @@
+[project]
+name = "jify"
+version = "0.0.1"
+authors = [
+    { name = "T. De Corso" }
+]
+
+[dependencies]
+python = "^3.13"
