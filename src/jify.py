@@ -2,6 +2,8 @@ import os
 import shutil
 import ast
 
+CONFIG_PATH = "C:/Users/Tony/dev/jify/jify.config"
+
 def welcome():
     print("### Hello from Jify.")
 
@@ -70,7 +72,7 @@ def clear_file(filename):
         pass
 
 def find_cpackage(target_tag):
-    with open('jify.config', 'r') as config:
+    with open(CONFIG_PATH, 'r') as config:
         lines = config.readlines()
 
     in_section = False
@@ -106,7 +108,7 @@ def find_cpackage(target_tag):
     return CPackage(tag, include_folder, lib_files)
 
 def find_ctemplate(target_tag):
-    with open('jify.config', 'r') as config:
+    with open(CONFIG_PATH, 'r') as config:
         lines = config.readlines()
 
     in_section = False
